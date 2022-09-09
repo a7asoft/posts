@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorTextPrimary">#ffffff</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_60">#666666</color>
+
+
+    <!--Material color list from https://material.io/guidelines/style/color.html-->
+
+    <color name="red_600">#E53935</color>
+
+    <color name="light_blue_400">#29B6F6</color>
+
+    <color name="green_100">#C8E6C9</color>
+
+    <color name="light_green_400">#9CCC65</color>
+
+    <color name="purple_500">#9C27B0</color>
+
+    <color name="blue_600">#1E88E5</color>
+    <color name="blue_700">#1976D2</color>
+
+    <color name="teal_200">#80CBC4</color>
+    <color name="teal_700">#00796B</color>
+
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_200">#EEEEEE</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="grey_500">#9E9E9E</color>
+    <color name="grey_600">#757575</color>
+
+
+    <!--for random color generator -->
+</resources>
