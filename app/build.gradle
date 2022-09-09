@@ -20,12 +20,40 @@ android {
         buildConfigField ("String", 'BASE_URL', "\"${BASE_URL}\"")
     }
 
-    buildTypes {
+    signingConfigs {
+        debug {
+            keyAlias 'key_prod'
+            keyPassword 'TestAndroid2022'
+            storeFile file('key_prod.jks')
+            storePassword 'TestAndroid2022'
+        }
+
         release {
+            keyAlias 'key_prod'
+            keyPassword 'TestAndroid2022'
+            storeFile file('key_prod.jks')
+            storePassword 'TestAndroid2022'
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
             minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -33,6 +61,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
     buildFeatures {
         viewBinding true
     }

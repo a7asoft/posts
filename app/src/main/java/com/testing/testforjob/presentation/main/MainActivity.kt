@@ -1,10 +1,12 @@
 package com.testing.testforjob.presentation.main
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.viewpager2.widget.ViewPager2
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
+import com.testing.testforjob.R
 import com.testing.testforjob.databinding.ActivityMainBinding
 import com.testing.testforjob.presentation.contacts.ContactsFragment
 import com.testing.testforjob.presentation.info.InfoFragment
@@ -18,11 +20,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
 
+    @SuppressLint("NewApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         setSupportActionBar(binding.toolbar)
 
         setupViewPager(binding.viewPager)
@@ -39,15 +42,15 @@ class MainActivity : AppCompatActivity() {
         binding.bottomBar.setOnItemSelectedListener {
             when (it) {
                 0 -> {
-                    binding.toolbarTitle.text = "Posts"
+                    binding.toolbarTitle.text = getString(R.string.posts)
                     binding.viewPager.currentItem = 0
                 }
                 1 -> {
-                    binding.toolbarTitle.text = "Contacts"
+                    binding.toolbarTitle.text = getString(R.string.contacts)
                     binding.viewPager.currentItem = 1
                 }
                 2 -> {
-                    binding.toolbarTitle.text = "My Info"
+                    binding.toolbarTitle.text = getString(R.string.my_info)
                     binding.viewPager.currentItem = 2
                 }
             }
@@ -81,13 +84,13 @@ class MainActivity : AppCompatActivity() {
             override fun onPageSelected(position: Int) {
                 when (position) {
                     0 -> {
-                        binding.toolbarTitle.text = "Posts"
+                        binding.toolbarTitle.text = getString(R.string.posts)
                     }
                     1 -> {
-                        binding.toolbarTitle.text = "Contacts"
+                        binding.toolbarTitle.text = getString(R.string.contacts)
                     }
                     2 -> {
-                        binding.toolbarTitle.text = "My Info"
+                        binding.toolbarTitle.text = getString(R.string.my_info)
                     }
                 }
                 binding.bottomBar.itemActiveIndex = position

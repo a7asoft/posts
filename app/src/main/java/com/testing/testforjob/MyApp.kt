@@ -9,6 +9,5 @@ class MyApp : Application() {
 
     override fun attachBaseContext(base: Context) {
         super.attachBaseContext(base)
-
     }
 }

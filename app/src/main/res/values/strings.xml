@@ -14,4 +14,6 @@
     <string name="an_error_has_occurred">An error has occurred</string>
     <string name="comments">Comments</string>
     <string name="retry">RETRY</string>
+    <string name="contacts">Contacts</string>
+    <string name="my_info">My Info</string>
 </resources>

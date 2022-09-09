@@ -15,6 +15,15 @@
 
     </style>
 
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_back</item>
+        <item name="colorPrimary">@color/blue_600</item>
+        <item name="colorPrimaryDark">@color/blue_600</item>
+        <item name="colorAccent">@color/blue_600</item>
+        <item name="android:statusBarColor">@color/blue_600</item>
+    </style>
+
+
     <style name="Theme.Posts.Trans" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:windowTranslucentStatus">true</item>
         <item name="colorSecondary">@color/black</item>
